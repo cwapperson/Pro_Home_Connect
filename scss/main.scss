@@ -1,51 +1,102 @@
 @import "config";
-
+@import "menu";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-li,
 a,
-ul {
+li,
+i {
   text-decoration: none;
   list-style: none;
-  color: white;
 }
 
 header {
   text-align: center;
   background-color: black;
 
+  .logo {
+    max-width: 50%;
+  }
+
   h1 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 1rem;
   }
 }
 
-.logo {
-  max-width: 50%;
-}
-
 nav {
+  position: relative;
   background-color: black;
-  margin-top: .5em;
+  margin-top: 0.5em;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  .menu_item,
-  .ham {
-    padding: .5rem .5rem;
+  a {
+    color: white;
   }
 
+  .menu_item {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
-.name ul li {
-  color: black;
+.nav_overlay {
+  display: none;
+
+  &.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    top: 0;
+    left: 0;
+  }
+
+  .nav_overlay_item {
+    padding: 1rem;
+  }
+}
+
+.name {
+  text-align: center;
+  margin: 0.5rem;
+
+  .span,
+  li {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    font-weight: 1000;
+  }
+
+  .span {
+    color: $secondary-color;
+  }
+
+  li {
+    padding: 0.25rem;
+  }
+}
+
+.icons {
+  text-align: center;
+  text-decoration: none;
+  margin: 0.5rem;
+  a {
+    padding: 0.5rem;
+    color: black;
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+  }
 }
 
 @import "mobile";
