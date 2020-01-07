@@ -15,6 +15,7 @@ i {
   list-style: none;
 }
 
+//Header
 header {
   text-align: center;
   background-color: black;
@@ -30,6 +31,7 @@ header {
   }
 }
 
+// Navigation
 nav {
   position: relative;
   background-color: black;
@@ -37,6 +39,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 8vh;
 
   a {
     color: white;
@@ -48,15 +51,20 @@ nav {
 }
 
 .nav_overlay {
+  position: relative;
+  min-height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   display: none;
 
-  &.show {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+  .nav_overlay_item {
     top: 0;
+    left: 0;
+  }
+
+  &.show {
+    display: flex;
   }
 
   .nav_overlay_item {
@@ -65,6 +73,7 @@ nav {
   }
 }
 
+// Name
 .name {
   text-align: center;
   margin: 0.5rem;
@@ -78,6 +87,7 @@ nav {
 
   .span {
     color: $secondary-color;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   li {
@@ -85,6 +95,7 @@ nav {
   }
 }
 
+// Icons
 .icons {
   text-align: center;
   text-decoration: none;

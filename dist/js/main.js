@@ -18,3 +18,15 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+function autoCloseMenu(x) {
+  if (x.matches) {
+    // If media query matches
+    menuBtn.classList.remove("close");
+    menuNav.classList.remove("show");
+  }
+}
+
+var x = window.matchMedia("(min-width: 500px)");
+autoCloseMenu(x); // Call listener function at run time
+x.addListener(autoCloseMenu); // Attach listener function on state changes

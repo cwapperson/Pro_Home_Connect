@@ -1,11 +1,12 @@
 // Menu Button
 .menu-btn {
+  position: absolute;
   z-index: 3;
   right: 0;
   top: 0;
   cursor: pointer;
   @include easeOut;
-  margin: 0.5rem;
+  margin: 1rem;
 
   .btn-line {
     width: 28px;
