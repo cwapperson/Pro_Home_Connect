@@ -1,0 +1,90 @@
+// IPhone
+@include mediaSm {
+    header {
+        h1 {
+            font-size: 1.25rem;
+        }
+    }
+
+    nav {
+        background-color: black;
+        margin-top: .5em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .menu_item,
+        .ham {
+            padding: .5rem .5rem;
+        }
+
+        .menu_item {
+            display: none;
+        }
+
+        .ham {
+            display: inline;
+        }
+
+    }
+
+}
+
+// Tablets
+@include mediaMd {
+
+    nav {
+        justify-content: space-around;
+
+        .menu_item,
+        .ham {
+            padding: .5rem 1rem;
+        }
+
+        .ham {
+            display: none;
+        }
+    }
+}
+
+// Desktops
+@include mediaLg {
+    .logo {
+        max-width: 30%;
+    }
+
+    nav {
+        justify-content: flex-end;
+
+        .menu_item,
+        .ham {
+            padding: .5rem 2.5rem;
+        }
+
+        .ham {
+            display: none;
+        }
+    }
+
+}
+
+// Widscreens
+@include mediaXl {
+    .logo {
+        max-width: 30%;
+    }
+
+    nav {
+        justify-content: flex-end;
+
+        .menu_item,
+        .ham {
+            padding: .5rem 3rem;
+        }
+
+        .ham {
+            display: none;
+        }
+    }
+
+}

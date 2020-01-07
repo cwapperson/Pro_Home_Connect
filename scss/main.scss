@@ -1,0 +1,51 @@
+@import "config";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li,
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+header {
+  text-align: center;
+  background-color: black;
+
+  h1 {
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.logo {
+  max-width: 50%;
+}
+
+nav {
+  background-color: black;
+  margin-top: .5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .menu_item,
+  .ham {
+    padding: .5rem .5rem;
+  }
+
+}
+
+.name ul li {
+  color: black;
+}
+
+@import "mobile";
