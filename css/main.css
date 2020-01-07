@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .menu-btn {
+  position: absolute;
   z-index: 3;
   right: 0;
   top: 0;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  margin: 0.5rem; }
+  margin: 1rem; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -49,21 +50,25 @@ nav {
   margin-top: 0.5em;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  min-height: 8vh; }
   nav a {
     color: white; }
   nav .menu_item {
     padding: 0.5rem 0.5rem; }
 
 .nav_overlay {
+  position: relative;
+  min-height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   display: none; }
+  .nav_overlay .nav_overlay_item {
+    top: 0;
+    left: 0; }
   .nav_overlay.show {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    top: 0; }
+    display: flex; }
   .nav_overlay .nav_overlay_item {
     margin-top: -1rem;
     padding: 1rem; }
@@ -77,7 +82,8 @@ nav {
     padding: 0.25rem;
     font-weight: 1000; }
   .name .span {
-    color: #eece1a; }
+    color: #eece1a;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
   .name li {
     padding: 0.25rem; }
 
