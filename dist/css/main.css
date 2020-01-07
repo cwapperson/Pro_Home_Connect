@@ -82,8 +82,7 @@ nav {
     padding: 0.25rem;
     font-weight: 1000; }
   .name .span {
-    color: #eece1a;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+    color: #eece1a; }
   .name li {
     padding: 0.25rem; }
 
