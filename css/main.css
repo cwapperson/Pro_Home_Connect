@@ -1,64 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+.menu-btn {
+  z-index: 3;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  margin: 0.5rem; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Montserrat", sans-serif; }
 
-li,
 a,
-ul {
+li,
+i {
   text-decoration: none;
-  list-style: none;
-  color: white; }
+  list-style: none; }
 
 header {
   text-align: center;
   background-color: black; }
+  header .logo {
+    max-width: 50%; }
   header h1 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 1rem; }
 
-.logo {
-  max-width: 50%; }
-
 nav {
+  position: relative;
   background-color: black;
-  margin-top: .5em;
+  margin-top: 0.5em;
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  nav .menu_item,
-  nav .ham {
-    padding: .5rem .5rem; }
+  nav a {
+    color: white; }
+  nav .menu_item {
+    padding: 0.5rem 0.5rem; }
 
-.name ul li {
-  color: black; }
+.nav_overlay {
+  display: none; }
+  .nav_overlay.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    top: 0;
+    left: 0; }
+  .nav_overlay .nav_overlay_item {
+    padding: 1rem; }
+
+.name {
+  text-align: center;
+  margin: 0.5rem; }
+  .name .span,
+  .name li {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    font-weight: 1000; }
+  .name .span {
+    color: #eece1a; }
+  .name li {
+    padding: 0.25rem; }
+
+.icons {
+  text-align: center;
+  text-decoration: none;
+  margin: 0.5rem; }
+  .icons a {
+    padding: 0.5rem;
+    color: black; }
+    .icons a:hover {
+      color: #eece1a;
+      transition: all 0.5s ease-out; }
 
 @media screen and (max-width: 500px) {
-  header h1 {
-    font-size: 1.25rem; }
   nav {
     background-color: black;
-    margin-top: .5em;
+    margin-top: 0.5em;
     display: flex;
     justify-content: flex-end;
     align-items: center; }
-    nav .menu_item,
-    nav .ham {
-      padding: .5rem .5rem; }
+    nav .menu_item {
+      padding: 0.5rem 0.5rem; }
     nav .menu_item {
       display: none; }
-    nav .ham {
+    nav .menu-btn {
       display: inline; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   nav {
     justify-content: space-around; }
-    nav .menu_item,
-    nav .ham {
-      padding: .5rem 1rem; }
-    nav .ham {
-      display: none; } }
+    nav .menu_item {
+      padding: 0.5rem 0.75rem; }
+    nav .menu-btn {
+      display: none; }
+  .nav_overlay {
+    display: none; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .logo {
@@ -67,9 +123,11 @@ nav {
     justify-content: flex-end; }
     nav .menu_item,
     nav .ham {
-      padding: .5rem 2.5rem; }
-    nav .ham {
-      display: none; } }
+      padding: 0.5rem 2.5rem; }
+    nav .menu-btn {
+      display: none; }
+  .nav_overlay {
+    display: none; } }
 
 @media screen and (min-width: 1171px) {
   .logo {
@@ -78,6 +136,8 @@ nav {
     justify-content: flex-end; }
     nav .menu_item,
     nav .ham {
-      padding: .5rem 3rem; }
-    nav .ham {
-      display: none; } }
+      padding: 0.5rem 3rem; }
+    nav .menu-btn {
+      display: none; }
+  .nav_overlay {
+    display: none; } }
