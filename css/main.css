@@ -51,7 +51,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh; }
+  min-height: 10vh; }
   nav a {
     color: white; }
   nav .menu_item {
@@ -59,7 +59,7 @@ nav {
 
 .nav_overlay {
   position: relative;
-  min-height: 8vh;
+  min-height: 10vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,9 +73,17 @@ nav {
     margin-top: -1rem;
     padding: 1rem; }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.sticky + .nav_overlay_item {
+  padding-top: 102px; }
+
 .name {
   text-align: center;
-  margin: 0.5rem; }
+  margin: 1vh; }
   .name .span,
   .name li {
     font-size: 1.25rem;
@@ -89,13 +97,39 @@ nav {
 .icons {
   text-align: center;
   text-decoration: none;
-  margin: 0.5rem; }
+  margin: 1vh; }
   .icons a {
     padding: 0.5rem;
     color: black; }
     .icons a:hover {
       color: #eece1a;
       transition: all 0.5s ease-out; }
+
+.about_me {
+  width: 100%;
+  background-color: black;
+  position: relative; }
+  .about_me .about_me_title {
+    position: absolute;
+    background-color: white;
+    width: 100%; }
+    .about_me .about_me_title h2 {
+      color: white; }
+  .about_me p {
+    color: white; }
+  .about_me .portrait img {
+    height: auto;
+    max-width: 150px; }
+  .about_me .about_me_video {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh; }
+    .about_me .about_me_video iframe {
+      height: 100%;
+      width: 100%; }
 
 @media screen and (max-width: 500px) {
   nav {
@@ -119,7 +153,10 @@ nav {
     nav .menu-btn {
       display: none; }
   .nav_overlay {
-    display: none; } }
+    display: none; }
+  .name .span,
+  .name li {
+    font-size: 1.5rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .logo {
@@ -132,7 +169,20 @@ nav {
     nav .menu-btn {
       display: none; }
   .nav_overlay {
-    display: none; } }
+    display: none; }
+  .name .span,
+  .name li {
+    font-size: 1.75rem; }
+  .about_me .about_me_video {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh; }
+    .about_me .about_me_video iframe {
+      height: 75%;
+      width: 75%; } }
 
 @media screen and (min-width: 1171px) {
   .logo {
@@ -145,4 +195,17 @@ nav {
     nav .menu-btn {
       display: none; }
   .nav_overlay {
-    display: none; } }
+    display: none; }
+  .name .span,
+  .name li {
+    font-size: 1.75rem; }
+  .about_me .about_me_video {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh; }
+    .about_me .about_me_video iframe {
+      height: 75%;
+      width: 75%; } }
