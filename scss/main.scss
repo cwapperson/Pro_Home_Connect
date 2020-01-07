@@ -39,7 +39,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 10vh;
 
   a {
     color: white;
@@ -52,7 +52,7 @@ nav {
 
 .nav_overlay {
   position: relative;
-  min-height: 8vh;
+  min-height: 10vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,10 +73,22 @@ nav {
   }
 }
 
+// Sticky header as the user scrolls down
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+// Adding some padding
+.sticky + .nav_overlay_item {
+  padding-top: 102px;
+}
+
 // Name
 .name {
   text-align: center;
-  margin: 0.5rem;
+  margin: 1vh;
 
   .span,
   li {
@@ -99,7 +111,7 @@ nav {
 .icons {
   text-align: center;
   text-decoration: none;
-  margin: 0.5rem;
+  margin: 1vh;
   a {
     padding: 0.5rem;
     color: black;
@@ -111,5 +123,42 @@ nav {
 }
 
 // About Me
+.about_me {
+  width: 100%;
+  background-color: black;
+  position: relative;
+
+  .about_me_title {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    h2 {
+      color: white;
+    }
+  }
+
+  p {
+    color: white;
+  }
+
+  .portrait img {
+    height: auto;
+    max-width: 150px;
+  }
+
+  .about_me_video {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 
 @import "mobile";

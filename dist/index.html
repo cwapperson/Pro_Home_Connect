@@ -18,7 +18,7 @@
     </header>
 
     <nav>
-      <div class="menu_item">
+      <div class="menu_item" id="navbar">
         <a href="#about_me" class="about_me">About Me</a>
       </div>
       <div class="menu_item">
@@ -29,13 +29,13 @@
       </div>
       <div class="menu_item"><a href="#retail" class="retail">Retail</a></div>
 
-      <div class="menu-btn">
+      <div class="menu-btn" id="navbar">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
       </div>
 
-      <nav class="nav_overlay">
+      <nav class="nav_overlay" id="navbar">
         <div class="nav_overlay_item">
           <a href="#about_me" class="about_me">About Me</a>
         </div>
@@ -83,11 +83,14 @@
       </a>
     </section>
 
-    <!-- <section class="about_me">
-      <div class="portrait">
-        <img src="/dist/img/portrait.png" alt="portriat" />
+    <section class="about_me">
+      <div class="about_me_title">
+        <div class="round_bar"></div>
+        <div class="portrait">
+          <img src="/dist/img/portrait.png" alt="portrait" />
+        </div>
+        <h2>About Me</h2>
       </div>
-      <h2>About Me</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
         perferendis.
@@ -96,7 +99,18 @@
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, corrupti?
       </p>
-    </section> -->
+
+      <div class="about_me_video">
+        <iframe
+          width="1280"
+          height="700"
+          src="https://www.youtube.com/embed/HRwJvzD_Ud0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
 
     <script src="js/main.js"></script>
   </body>
