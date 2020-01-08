@@ -110,34 +110,6 @@ nav {
       color: #eece1a;
       transition: all 0.5s ease-out; }
 
-.about_me {
-  width: 100%;
-  position: relative; }
-  .about_me .round_bar {
-    position: relative;
-    width: 35vw;
-    background-color: black;
-    height: 150px;
-    border-radius: 0px 75px 75px 0px; }
-  .about_me .portrait img {
-    position: absolute;
-    border-radius: 100px;
-    height: 150px;
-    width: auto;
-    right: 0;
-    border: black solid 2px; }
-  .about_me p {
-    padding: .5rem;
-    padding-left: 25vw; }
-  .about_me .about_me_video {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center; }
-  .about_me iframe {
-    width: 75vw;
-    height: 50vw; }
-
 @media screen and (max-width: 500px) {
   nav {
     justify-content: flex-end; }
@@ -175,9 +147,7 @@ nav {
     display: none; }
   .name .span,
   .name li {
-    font-size: 1.75rem; }
-  .about_me .round_bar {
-    width: 25vw; } }
+    font-size: 1.75rem; } }
 
 @media screen and (min-width: 1171px) {
   .logo {
@@ -194,8 +164,6 @@ nav {
   .name .span,
   .name li {
     font-size: 1.75rem; }
-  .about_me .round_bar {
-    width: 15vw; }
   .about_me iframe {
     width: 50vw;
     height: 50vh; } }

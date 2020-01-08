@@ -132,66 +132,25 @@ nav {
 }
 
 // About Me
-.about_me {
-  width: 100%;
-  position: relative;
 
-  .round_bar {
-    position: relative;
-    width: 35vw;
-    background-color: black;
-    height: 150px;
-    border-radius: 0px 75px 75px 0px;
-  }
 
-  .portrait img {
-    position: absolute;
-    border-radius: 100px;
-    height: 150px;
-    width: auto;
-    right: 0;
-    border: black solid 2px;
-  }
+// p {
+//   padding: .5rem;
+//   padding-left: 25vw;
+// }
 
-  // .about_me_title {
-  //   z-index: 1;
-  //   top: 25%;
-  //   right: 0;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   position: absolute;
-  //   // text-align: center;
-  //   width: 100%;
+// .about_me_video {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   align-items: center;
 
-  //   .title-line {
-  //     width: 700px;
-  //     height: 3px;
-  //     // margin: 0 1rem 0 1rem;
-  //     background: black;
-  //   }
+// }
 
-  // }
+// iframe {
+//   width: 75vw;
+//   height: 50vw;
+// }
 
-  p {
-    padding: .5rem;
-    padding-left: 25vw;
-  }
-
-  .about_me_video {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-
-  }
-
-  iframe {
-    width: 75vw;
-    height: 50vw;
-  }
-
-}
 
 @import "mobile";
