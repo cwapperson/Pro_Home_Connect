@@ -15,6 +15,19 @@
       display: inline;
     }
   }
+
+
+  // About Me
+  .about_me .about_me_title h2 {
+    transform: translateX(15%);
+  }
+
+
+
+  // Investors Me
+  .investors .investors_title h2 {
+    transform: translateX(15%);
+  }
 }
 
 // Tablets
@@ -43,7 +56,6 @@
       font-size: 1.5rem;
     }
   }
-
 }
 
 // Desktops
@@ -79,9 +91,51 @@
     }
   }
 
-  // About Me
-  .about_me {}
+  // About Me Content
+  .about_me_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  //About Me Video
+  .about_me_video {
+    flex-direction: row;
+
+    iframe {
+      width: 640px;
+      height: 350px;
+    }
+  }
+
+  // Investors Content
+  .investors_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  //Investors Video
+  .investors_video {
+    flex-direction: row;
+
+    iframe {
+      width: 640px;
+      height: 350px;
+    }
+  }
+
 }
+
+
 
 // Widscreens
 @include mediaXl {
@@ -115,13 +169,47 @@
     }
   }
 
-  // About Me
-  .about_me {
+
+  // About Me Content
+  .about_me_content {
+    flex-direction: row;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    p {
+      padding: 2rem;
+    }
+  }
+
+  //About Me Video
+  .about_me_video {
+    flex-direction: row;
 
     iframe {
-      width: 50vw;
-      height: 50vh;
+      width: 640px;
+      height: 350px;
     }
-
   }
+
+  // Investors Content
+  .investors_content {
+    flex-direction: row;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    p {
+      padding: 2rem;
+    }
+  }
+
+  //Investors Video
+  .investors_video {
+    flex-direction: row;
+
+    iframe {
+      width: 640px;
+      height: 350px;
+    }
+  }
+
 }
