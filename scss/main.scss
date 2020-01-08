@@ -8,6 +8,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background-color: $main-background-color;
+}
+
 a,
 li,
 i {
@@ -27,7 +31,9 @@ header {
   h1 {
     color: white;
     font-size: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
   }
 }
 
@@ -35,14 +41,22 @@ header {
 nav {
   position: relative;
   background-color: black;
-  margin-top: 0.5em;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
 
+  // Nav Links
   a {
     color: white;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+      border: solid $secondary-color 1px;
+      padding: .5rem;
+    }
+
   }
 
   .menu_item {
@@ -50,6 +64,7 @@ nav {
   }
 }
 
+//Navigation Overlay
 .nav_overlay {
   position: relative;
   min-height: 10vh;
@@ -57,6 +72,7 @@ nav {
   display: flex;
   flex-direction: column;
   display: none;
+  padding-top: .5rem;
 
   .nav_overlay_item {
     top: 0;
@@ -81,7 +97,7 @@ nav {
 }
 
 // Adding some padding
-.sticky + .nav_overlay_item {
+.sticky+.nav_overlay_item {
   padding-top: 102px;
 }
 
@@ -90,21 +106,12 @@ nav {
   text-align: center;
   margin: 1vh;
 
-  .span,
   li {
     font-size: 1.25rem;
     padding: 0.25rem;
     font-weight: 1000;
   }
 
-  .span {
-    color: $secondary-color;
-    // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-
-  li {
-    padding: 0.25rem;
-  }
 }
 
 // Icons
@@ -112,9 +119,11 @@ nav {
   text-align: center;
   text-decoration: none;
   margin: 1vh;
+
   a {
     padding: 0.5rem;
     color: black;
+
     &:hover {
       color: $secondary-color;
       @include easeOut();
@@ -125,40 +134,64 @@ nav {
 // About Me
 .about_me {
   width: 100%;
-  background-color: black;
   position: relative;
 
-  .about_me_title {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    h2 {
-      color: white;
-    }
-  }
-
-  p {
-    color: white;
+  .round_bar {
+    position: relative;
+    width: 35vw;
+    background-color: black;
+    height: 150px;
+    border-radius: 0px 75px 75px 0px;
   }
 
   .portrait img {
-    height: auto;
-    max-width: 150px;
+    position: absolute;
+    border-radius: 100px;
+    height: 150px;
+    width: auto;
+    right: 0;
+    border: black solid 2px;
+  }
+
+  // .about_me_title {
+  //   z-index: 1;
+  //   top: 25%;
+  //   right: 0;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   position: absolute;
+  //   // text-align: center;
+  //   width: 100%;
+
+  //   .title-line {
+  //     width: 700px;
+  //     height: 3px;
+  //     // margin: 0 1rem 0 1rem;
+  //     background: black;
+  //   }
+
+  // }
+
+  p {
+    padding: .5rem;
+    padding-left: 25vw;
   }
 
   .about_me_video {
-    margin-top: 20vh;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    height: 50vh;
 
-    iframe {
-      height: 100%;
-      width: 100%;
-    }
   }
+
+  iframe {
+    width: 75vw;
+    height: 50vw;
+  }
+
 }
 
 @import "mobile";
