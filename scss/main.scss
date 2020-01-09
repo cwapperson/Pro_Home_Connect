@@ -239,5 +239,13 @@ nav {
 
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
 
 @import "mobile";
