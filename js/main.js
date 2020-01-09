@@ -32,3 +32,17 @@ function autoCloseMenu(x) {
 var x = window.matchMedia("(min-width: 500px)");
 autoCloseMenu(x); // Call listener function at run time
 x.addListener(autoCloseMenu); // Attach listener function on state changes
+
+$(function() {
+  var mainNav = $("nav");
+  sticky = "sticky";
+  headerHeight = $("header").height();
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > headerHeight) {
+      mainNav.addClass(sticky);
+    } else {
+      mainNav.removeClass(sticky);
+    }
+  });
+});
