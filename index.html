@@ -18,6 +18,7 @@
       <h1>Real Estate Solutions Made Easy</h1>
     </header>
 
+        <!-- Navigation Bar -->
     <nav>
       <div class="menu_item">
         <a href="#about_me" class="about_me">About Me</a>
@@ -28,7 +29,9 @@
       <div class="menu_item">
         <a href="#wholesale" class="wholesale">Wholesale</a>
       </div>
-      <div class="menu_item"><a href="#retail" class="retail">Retail</a></div>
+      <div class="menu_item">
+        <a href="#retail" class="retail">Retail</a>
+      </div>
 
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -38,20 +41,21 @@
 
       <nav class="nav_overlay">
         <div class="nav_overlay_item">
-          <a href="#about_me" class="about_me">About Me</a>
+          <a href="#about_me" class="about_me" onclick='return autoCloseNavOverlay()'>About Me</a>
         </div>
         <div class="nav_overlay_item">
-          <a href="#investors" class="investors">Working with Investors</a>
+          <a href="#investors" class="investors" onclick='return autoCloseNavOverlay()'>Working with Investors</a>
         </div>
         <div class="nav_overlay_item">
-          <a href="#wholesale" class="wholesale">Wholesale</a>
+          <a href="#wholesale" class="wholesale" onclick='return autoCloseNavOverlay()'>Wholesale</a>
         </div>
         <div class="nav_overlay_item">
-          <a href="#retail" class="retail">Retail</a>
+          <a href="#retail" class="retail" onclick='return autoCloseNavOverlay()'>Retail</a>
         </div>
       </nav>
     </nav>
 
+        <!-- Name and Social Media -->
     <section class="name">
       <ul>
         <li>Katie Apperson</li>
@@ -79,7 +83,10 @@
       </a>
     </section>
 
-    <section class="about_me" id="about_me">
+    <!-- About Me Section -->
+    <div class="nav_spacer" id="about_me"></div>
+
+    <section class="about_me">
       <img src="img/portrait_small.jpg" alt="portrait" class="portrait" />
 
       <div class="about_me_title">
@@ -134,7 +141,12 @@
       ></iframe>
     </div>
 
-    <section class="investors" id="investors">
+    <div class="contact_me"></div>
+    <a href="#">Contact Me</a>
+
+        <!-- Investors -->
+    <div class="nav_spacer" id="investors"></div>
+    <section class="investors">
       <div class="round_block"></div>
 
       <div class="investors_title">
@@ -144,7 +156,7 @@
       </div>
     </section>
 
-    <section class="investors_content" id="bg-img">
+    <section class="investors_content">
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit vel
         minus, officiis porro assumenda tempore odit aperiam odio quasi
@@ -186,15 +198,9 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <iframe
-        width="426"
-        height="233"
-        src="https://www.youtube.com/embed/cD1jYoipuDs"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
     </div>
+
+
 
     <script src="js/main.js"></script>
   </body>
