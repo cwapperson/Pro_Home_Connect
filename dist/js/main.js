@@ -1,3 +1,4 @@
+// Toggles the navigation menu
 const menuBtn = document.querySelector(".menu-btn");
 const menuNav = document.querySelector(".nav_overlay");
 
@@ -21,6 +22,10 @@ function toggleMenu() {
 
 // Function will auto close the navigation menu if it is
 // open and the size of the resolution changes
+var x = window.matchMedia("(min-width: 501px)");
+autoCloseMenu(x); // Call listener function at run time
+x.addListener(autoCloseMenu); // Attach listener function on state changes
+
 function autoCloseMenu(x) {
   if (x.matches) {
     // If media query matches
@@ -29,13 +34,11 @@ function autoCloseMenu(x) {
   }
 }
 
-var x = window.matchMedia("(min-width: 500px)");
-autoCloseMenu(x); // Call listener function at run time
-x.addListener(autoCloseMenu); // Attach listener function on state changes
-
+// This funtion will add a sticky header when the user
+// scrolls down.
 $(function() {
   var mainNav = $("nav");
-  sticky = "sticky";
+  sticky = "sticky_header";
   headerHeight = $("header").height();
 
   $(window).scroll(function() {
@@ -46,3 +49,13 @@ $(function() {
     }
   });
 });
+
+// Automatically closes the navigation menu when the user
+// clicks on a link
+// const autoClose = document.querySelector(".auto-close");
+function autoCloseNavOverlay() {
+  // If media query matches
+  menuBtn.classList.remove("close");
+  menuNav.classList.remove("show");
+  console.log("auto closing nav overlay");
+}

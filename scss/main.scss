@@ -23,6 +23,11 @@ i {
   list-style: none;
 }
 
+p {
+  color: white;
+  z-index: 1;
+}
+
 //Header
 header {
   text-align: center;
@@ -41,6 +46,11 @@ header {
   }
 }
 
+.nav_spacer {
+  min-height: 4vh;
+  width: 100%;
+}
+
 // Navigation
 nav {
   position: relative;
@@ -48,7 +58,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 5vh;
 
   // Nav Links
   a {
@@ -128,13 +138,10 @@ nav {
   height: auto;
 
   .portrait {
-    top: 0;
-    left: 0;
     width: auto;
     height: 150px;
     border-radius: 0 75px 75px 0;
   }
-
 
   .about_me_title {
     position: absolute;
@@ -144,21 +151,29 @@ nav {
     text-align: center;
     z-index: -1;
     transform: translateY(-50%);
+    font-size: 1em;
+
+    h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
 
     .title-line {
       height: 3px;
       width: 100%;
       background-color: black;
     }
-
   }
 }
 
 // About Me Content
 .about_me_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  @include background($about_me_background);
 }
 
 //About Me Video
@@ -175,18 +190,20 @@ nav {
 
 }
 
-
+// Contact Me
+.contact_me {
+  width: 100%;
+  text-align: center;
+}
 
 
 
 
 // Investors
 .investors {
-  margin-top: 2rem;
   position: relative;
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
 
   .round_block {
     top: 0;
@@ -206,6 +223,11 @@ nav {
     z-index: -1;
     transform: translateY(-50%);
 
+    h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+
     .title-line {
       height: 3px;
       width: 100%;
@@ -218,10 +240,12 @@ nav {
 
 // Investors Content
 .investors_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-
+  @include background($investor_me_background);
 }
 
 
@@ -239,7 +263,7 @@ nav {
 
 }
 
-.sticky {
+.sticky_header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;

@@ -6,7 +6,7 @@
   top: 0;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  margin: 1rem; }
+  margin: .5rem; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -40,6 +40,10 @@ i {
   text-decoration: none;
   list-style: none; }
 
+p {
+  color: white;
+  z-index: 1; }
+
 header {
   text-align: center;
   background-color: black; }
@@ -52,13 +56,17 @@ header {
     font-weight: normal;
     margin-bottom: .5rem; }
 
+.nav_spacer {
+  min-height: 4vh;
+  width: 100%; }
+
 nav {
   position: relative;
   background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh; }
+  min-height: 5vh; }
   nav a {
     color: white; }
     nav a:hover {
@@ -110,8 +118,6 @@ nav {
   width: 100%;
   height: auto; }
   .about_me .portrait {
-    top: 0;
-    left: 0;
     width: auto;
     height: 150px;
     border-radius: 0 75px 75px 0; }
@@ -122,16 +128,33 @@ nav {
     width: 100%;
     text-align: center;
     z-index: -1;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    font-size: 1em; }
+    .about_me .about_me_title h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
     .about_me .about_me_title .title-line {
       height: 3px;
       width: 100%;
       background-color: black; }
 
 .about_me_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem; }
+  padding: 2rem;
+  background-image: url(/dist/img/about_me_background.jpg);
+  background-position: center;
+  background-size: cover; }
+  .about_me_content:after {
+    content: " ";
+    position: absolute;
+    background: rgba(68, 68, 68, 0.8);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
 
 .about_me_video {
   display: flex;
@@ -142,12 +165,14 @@ nav {
   .about_me_video iframe {
     padding: 1rem; }
 
+.contact_me {
+  width: 100%;
+  text-align: center; }
+
 .investors {
-  margin-top: 2rem;
   position: relative;
   width: 100%;
-  height: auto;
-  margin-bottom: 2rem; }
+  height: auto; }
   .investors .round_block {
     top: 0;
     left: 0;
@@ -163,15 +188,31 @@ nav {
     text-align: center;
     z-index: -1;
     transform: translateY(-50%); }
+    .investors .investors_title h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
     .investors .investors_title .title-line {
       height: 3px;
       width: 100%;
       background-color: black; }
 
 .investors_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem; }
+  padding: 2rem;
+  background-image: url(/dist/img/investors.JPEG);
+  background-position: center;
+  background-size: cover; }
+  .investors_content:after {
+    content: " ";
+    position: absolute;
+    background: rgba(68, 68, 68, 0.8);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
 
 .investors_video {
   display: flex;
@@ -182,7 +223,7 @@ nav {
   .investors_video iframe {
     padding: 1rem; }
 
-.sticky {
+.sticky_header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -199,9 +240,11 @@ nav {
     nav .menu-btn {
       display: inline; }
   .about_me .about_me_title h2 {
-    transform: translateX(15%); }
+    transform: translateX(20%);
+    font-size: 1.1em; }
   .investors .investors_title h2 {
-    transform: translateX(15%); } }
+    transform: translateX(20%);
+    font-size: 1.1em; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   nav {

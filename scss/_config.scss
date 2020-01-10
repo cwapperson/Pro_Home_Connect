@@ -2,27 +2,27 @@
 
 $primary-color: black;
 $secondary-color: #eece1a;
-
+$primary-background-color: #444;
+$background-opacity: .8;
+$about_me_background: url(/dist/img/about_me_background.jpg);
+$investor_me_background: url(/dist/img/investors.JPEG);
 $main-background-color: #f9f9f9;
 
 
-@mixin background {
-  &#bg-img {
-    background: url(/dist/img/investors.JPEG);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+@mixin background($data) {
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(black, .4);
-      z-index: -1;
-    }
+  background-image: $data;
+  background-position: center;
+  background-size: cover;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    background: rgba($primary-background-color, $background-opacity);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
