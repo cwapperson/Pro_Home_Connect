@@ -47,7 +47,7 @@ header {
 }
 
 .nav_spacer {
-  min-height: 4vh;
+  min-height: 5vh;
   width: 100%;
 }
 
@@ -58,7 +58,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 5vh;
+  min-height: 6vh;
 
   // Nav Links
   a {
@@ -70,11 +70,14 @@ nav {
       border: solid $secondary-color 1px;
       padding: .5rem;
     }
-
   }
 
   .menu_item {
     padding: 0.5rem 0.5rem;
+
+    .nav_name {
+      display: none;
+    }
   }
 }
 
@@ -100,6 +103,15 @@ nav {
     display: flex;
   }
 
+}
+
+// Sticky Navigation
+.sticky_header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 // Name
@@ -306,8 +318,6 @@ nav {
   }
 }
 
-
-
 // Investors Content
 .investors_content {
   position: relative;
@@ -317,7 +327,6 @@ nav {
   padding: 2rem;
   @include background($investor_me_background);
 }
-
 
 //Investors Video
 .investors_video {
@@ -333,13 +342,57 @@ nav {
 
 }
 
-.sticky_header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  right: 0;
-  z-index: 2;
+
+
+
+
+
+
+// Investors
+.wholesale {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .round_block {
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 0 75px 75px 0;
+    background-color: black;
+  }
+
+  .wholesale_title {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    transform: translateY(-50%);
+
+    h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+
+    .title-line {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+    }
+  }
 }
 
+// Investors Content
+.wholesale_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  @include background($investor_me_background);
+}
 
 @import "mobile";

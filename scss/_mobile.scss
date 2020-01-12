@@ -20,13 +20,19 @@
   // About Me
   .about_me .about_me_title h2 {
     transform: translateX(20%);
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   // Investors Me
   .investors .investors_title h2 {
     transform: translateX(20%);
-    font-size: 1.1em;
+    font-size: 1em;
+  }
+
+  // Whole Sale Title
+  .wholesale .wholesale_title h2 {
+    transform: translateX(20%);
+    font-size: 1em;
   }
 }
 
@@ -56,6 +62,26 @@
       font-size: 1.5rem;
     }
   }
+
+
+  // About Me
+  .about_me .about_me_title h2 {
+    transform: translateX(15%);
+    font-size: 1.2em;
+  }
+
+  // Investors Me
+  .investors .investors_title h2 {
+    transform: translateX(15%);
+    font-size: 1.2em;
+  }
+
+  // Whole Sale Title
+  .wholesale .wholesale_title h2 {
+    transform: translateX(15%);
+    font-size: 1.2em;
+  }
+
 }
 
 // Desktops
@@ -76,11 +102,13 @@
     .menu-btn {
       display: none;
     }
+
   }
 
   .nav_overlay {
     display: none;
   }
+
 
   // Name
   .name {
@@ -96,6 +124,8 @@
     flex-direction: row;
     padding-left: 5vw;
     padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
     p {
       padding: 1rem;
@@ -117,6 +147,8 @@
     flex-direction: row;
     padding-left: 5vw;
     padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
     p {
       padding: 1rem;
@@ -154,6 +186,27 @@
     .menu-btn {
       display: none;
     }
+
+    .menu_item {
+
+      .nav_name {
+
+        &.show {
+          all: unset;
+          display: block;
+          position: absolute;
+          color: white;
+          top: 50%;
+          left: 0;
+          padding-left: 2rem;
+          transform: translateY(-50%);
+
+          &:nth-child(2) {
+            left: 15%;
+          }
+        }
+      }
+    }
   }
 
   .nav_overlay {
@@ -173,8 +226,10 @@
   // About Me Content
   .about_me_content {
     flex-direction: row;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
     p {
       padding: 2rem;
@@ -196,6 +251,8 @@
     flex-direction: row;
     padding-left: 10vw;
     padding-right: 10vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
     p {
       padding: 2rem;
