@@ -393,7 +393,6 @@ nav {
 
 }
 
-
 // Wholesale Content
 .wholesale_content {
   position: relative;
@@ -401,7 +400,74 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  @include background($investor_me_background);
+  @include background($wholesale_background);
+
+}
+
+//Wholesale Steps
+.wholesale_steps {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  // Every child has the same margin
+  * {
+    margin-top: 1.2vh;
+    margin-bottom: 1.2vh;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h3:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .wholesale_step_break {
+    width: 60%;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto;
+
+  }
+}
+
+
+
+
+//Wholesale Process
+.wholesale_process {
+  position: relative;
+  margin: 3vw 5vh 2vw 5vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+
+  // margin-top: 3vh;
+  // width: 100%;
+  text-align: center;
+  @include background($wholesale_process_background);
+
+  h2 {
+    color: white;
+    z-index: 3;
+  }
+
+  i {
+    z-index: 3;
+  }
+
+  p {
+    padding: 1em;
+    font-size: 1rem;
+    color: white;
+  }
 
 }
 

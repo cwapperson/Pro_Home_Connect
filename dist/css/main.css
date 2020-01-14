@@ -340,7 +340,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-image: url(../img/investors.JPEG);
+  background-image: url(../img/wholesale_marketing.jpg);
   background-position: center;
   background-size: cover; }
   .wholesale_content:after {
@@ -351,6 +351,55 @@ nav {
     right: 0;
     width: 100%;
     height: 100%; }
+
+.wholesale_steps {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .wholesale_steps * {
+    margin-top: 1.2vh;
+    margin-bottom: 1.2vh; }
+  .wholesale_steps h3 {
+    font-size: 1em; }
+  .wholesale_steps h3:first-child {
+    font-size: 1.3em;
+    font-weight: bold; }
+  .wholesale_steps .wholesale_step_break {
+    width: 60%;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto; }
+
+.wholesale_process {
+  position: relative;
+  margin: 3vw 5vh 2vw 5vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  background-image: url(../img/wholesale_marketing_process.jpg);
+  background-position: center;
+  background-size: cover; }
+  .wholesale_process:after {
+    content: " ";
+    position: absolute;
+    background: rgba(68, 68, 68, 0.8);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+  .wholesale_process h2 {
+    color: white;
+    z-index: 3; }
+  .wholesale_process i {
+    z-index: 3; }
+  .wholesale_process p {
+    padding: 1em;
+    font-size: 1rem;
+    color: white; }
 
 @media screen and (max-width: 500px) {
   nav {
@@ -438,6 +487,21 @@ nav {
     .investors_video iframe {
       width: 640px;
       height: 350px; }
+  .wholesale_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw; }
+    .wholesale_content p {
+      padding: 1rem; }
+  .wholesale_process {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 20vw;
+    margin-left: 20vw; }
+    .wholesale_process p {
+      padding: 2rem; }
   .wholesale .wholesale_title .wholesale_title_desktop {
     display: block; }
   .wholesale .wholesale_title .wholesale_title_mobile {
@@ -506,4 +570,11 @@ nav {
     margin-right: 10vw;
     margin-left: 10vw; }
     .wholesale_content p {
+      padding: 2rem; }
+  .wholesale_process {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 30vw;
+    margin-left: 30vw; }
+    .wholesale_process p {
       padding: 2rem; } }

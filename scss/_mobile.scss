@@ -175,7 +175,30 @@
     }
   }
 
+  // Wholesale Content
+  .wholesale_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
+    p {
+      padding: 1rem;
+    }
+  }
+
+  // Wholesale Process
+  .wholesale_process {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 20vw;
+    margin-left: 20vw;
+
+    p {
+      padding: 2rem;
+    }
+  }
 
   // Wholesale Title
   .wholesale .wholesale_title .wholesale_title_desktop {
@@ -311,6 +334,18 @@
     padding-right: 10vw;
     margin-right: 10vw;
     margin-left: 10vw;
+
+    p {
+      padding: 2rem;
+    }
+  }
+
+  // Wholesale Process
+  .wholesale_process {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 30vw;
+    margin-left: 30vw;
 
     p {
       padding: 2rem;
