@@ -4,7 +4,7 @@
   z-index: 3;
   right: 0;
   top: 0;
-  transform: translate(-10px, 10px);
+  transform: translate(-10px, 5px);
   cursor: pointer;
   transition: all 0.5s ease-out;
   margin: .5rem; }
@@ -128,7 +128,7 @@ nav {
 
 .name {
   text-align: center;
-  margin: 1vh; }
+  width: 100%; }
   .name li {
     font-size: 1.25rem;
     padding: 0.25rem;
@@ -137,9 +137,11 @@ nav {
 .icons {
   text-align: center;
   text-decoration: none;
-  margin: 1vh; }
+  width: 100%;
+  height: auto; }
   .icons a {
-    padding: 0.5rem;
+    height: auto;
+    padding: .5rem;
     color: black; }
     .icons a:hover {
       color: #eece1a;
@@ -324,8 +326,7 @@ nav {
     z-index: -1;
     transform: translateY(-50%); }
     .wholesale .wholesale_title .wholesale_title_mobile {
-      padding-top: .5rem;
-      padding-bottom: .5rem; }
+      display: block; }
     .wholesale .wholesale_title .wholesale_title_desktop {
       display: none; }
     .wholesale .wholesale_title .title-line {
