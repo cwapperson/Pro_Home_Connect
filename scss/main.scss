@@ -117,7 +117,7 @@ nav {
 // Name
 .name {
   text-align: center;
-  margin: 1vh;
+  width: 100%;
 
   li {
     font-size: 1.25rem;
@@ -130,10 +130,12 @@ nav {
 .icons {
   text-align: center;
   text-decoration: none;
-  margin: 1vh;
+  width: 100%;
+  height: auto;
 
   a {
-    padding: 0.5rem;
+    height: auto;
+    padding: .5rem;
     color: black;
 
     &:hover {
@@ -373,8 +375,7 @@ nav {
     transform: translateY(-50%);
 
     .wholesale_title_mobile {
-      padding-top: .5rem;
-      padding-bottom: .5rem;
+      display: block;
     }
 
     .wholesale_title_desktop {
@@ -391,6 +392,7 @@ nav {
   }
 
 }
+
 
 // Wholesale Content
 .wholesale_content {
