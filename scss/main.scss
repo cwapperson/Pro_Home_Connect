@@ -348,7 +348,7 @@ nav {
 
 
 
-// Investors
+// Wholesale
 .wholesale {
   position: relative;
   width: 100%;
@@ -372,20 +372,27 @@ nav {
     z-index: -1;
     transform: translateY(-50%);
 
-    h2 {
+    .wholesale_title_mobile {
       padding-top: .5rem;
       padding-bottom: .5rem;
+    }
+
+    .wholesale_title_desktop {
+      display: none;
     }
 
     .title-line {
       height: 3px;
       width: 100%;
       background-color: black;
+
     }
+
   }
+
 }
 
-// Investors Content
+// Wholesale Content
 .wholesale_content {
   position: relative;
   margin: 2vw 5vh 2vw 5vh;
@@ -393,6 +400,7 @@ nav {
   flex-direction: column;
   padding: 2rem;
   @include background($investor_me_background);
+
 }
 
 @import "mobile";

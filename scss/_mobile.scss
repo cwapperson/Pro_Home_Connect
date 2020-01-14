@@ -76,10 +76,20 @@
     font-size: 1.2em;
   }
 
-  // Whole Sale Title
+  // Wholesale Title
   .wholesale .wholesale_title h2 {
     transform: translateX(15%);
     font-size: 1.2em;
+  }
+
+
+  // Wholesale Title
+  .wholesale .wholesale_title .wholesale_title_desktop {
+    display: block;
+  }
+
+  .wholesale .wholesale_title .wholesale_title_mobile {
+    display: none;
   }
 
 }
@@ -165,6 +175,17 @@
     }
   }
 
+
+
+  // Wholesale Title
+  .wholesale .wholesale_title .wholesale_title_desktop {
+    display: block;
+  }
+
+  .wholesale .wholesale_title .wholesale_title_mobile {
+    display: none;
+  }
+
 }
 
 
@@ -246,6 +267,9 @@
     }
   }
 
+
+
+
   // Investors Content
   .investors_content {
     flex-direction: row;
@@ -266,6 +290,30 @@
     iframe {
       width: 640px;
       height: 350px;
+    }
+  }
+
+
+
+  // Wholesale Title
+  .wholesale .wholesale_title .wholesale_title_desktop {
+    display: block;
+  }
+
+  .wholesale .wholesale_title .wholesale_title_mobile {
+    display: none;
+  }
+
+  // Wholesale Content
+  .wholesale_content {
+    flex-direction: row;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+
+    p {
+      padding: 2rem;
     }
   }
 
