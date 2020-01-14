@@ -34,18 +34,25 @@ function autoCloseMenu(x) {
   }
 }
 
+const navName = document.querySelector(".nav_name");
+
 // This funtion will add a sticky header when the user
 // scrolls down.
+
 $(function() {
   var mainNav = $("nav");
+  var navName = $("nav_name");
   sticky = "sticky_header";
+  show = "show";
   headerHeight = $("header").height();
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > headerHeight) {
       mainNav.addClass(sticky);
+      navName.addClass(show);
     } else {
       mainNav.removeClass(sticky);
+      navName.removeClass(show);
     }
   });
 });
