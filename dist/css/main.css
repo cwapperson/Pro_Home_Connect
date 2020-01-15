@@ -93,9 +93,9 @@ nav {
   nav a {
     color: white; }
     nav a:hover {
-      color: #eece1a;
+      color: #C0111F;
       transition: all 0.5s ease-out;
-      border: solid #eece1a 1px;
+      border: solid #C0111F 1px;
       padding: .5rem; }
   nav .menu_item {
     padding: 0.5rem 0.5rem; }
@@ -144,7 +144,7 @@ nav {
     padding: .5rem;
     color: black; }
     .icons a:hover {
-      color: #eece1a;
+      color: #C0111F;
       transition: all 0.5s ease-out; }
 
 .about_me {
@@ -205,52 +205,24 @@ nav {
   justify-content: center;
   text-align: center;
   margin-top: 2vh;
-  width: 100%;
-  height: 10vh; }
-  .contact_me_button a {
+  width: 100%; }
+  .contact_me_button button {
     position: absolute;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #eece1a;
+    color: white;
     background-color: black;
     box-shadow: 0 20px 50px rbga(0, 0, 0, 0.5);
     border: black solid 1px;
     padding: 1rem;
-    border-radius: 75px; }
-
-.modal_bg {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 2;
-  transform: translateY(8vh);
-  display: none; }
-  .modal_bg .modal_content {
-    position: relative;
-    width: 400px;
-    height: 250px;
-    background-color: white;
-    border-radius: 5px;
-    text-align: center; }
-    .modal_bg .modal_content input {
-      display: block;
-      width: 75%;
-      margin: 1rem auto; }
-    .modal_bg .modal_content .modal_button {
-      all: unset;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #eece1a;
-      background-color: black;
-      box-shadow: 0 20px 50px rbga(0, 0, 0, 0.5);
-      border: black solid 1px;
-      padding: .5rem;
-      border-radius: 75px; }
-  .modal_bg.show {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    border-radius: 75px;
+    cursor: pointer; }
+    .contact_me_button button:hover {
+      color: black;
+      background-color: #C0111F;
+      border-color: #C0111F;
+      font-weight: bolder;
+      transition: all 0.5s ease-out; }
 
 .investors {
   position: relative;

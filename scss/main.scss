@@ -204,6 +204,8 @@ nav {
 
 }
 
+
+
 // Contact Me
 .contact_me_button {
   position: relative;
@@ -212,18 +214,26 @@ nav {
   text-align: center;
   margin-top: 2vh;
   width: 100%;
-  height: 10vh;
 
-  a {
+  button {
     position: absolute;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: $secondary-color;
+    color: white;
     background-color: black;
     box-shadow: 0 20px 50px rbga(0, 0, 0, .5);
     border: black solid 1px;
     padding: 1rem;
     border-radius: 75px;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      font-weight: bolder;
+      @include easeOut;
+    }
 
   }
 }
@@ -235,49 +245,7 @@ nav {
 
 
 // Contact Me Modal
-.modal_bg {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(black, .8);
-  z-index: 2;
-  transform: translateY(8vh);
-  display: none;
 
-  .modal_content {
-    position: relative;
-    width: 400px;
-    height: 250px;
-    background-color: white;
-    border-radius: 5px;
-    text-align: center;
-
-    input {
-      display: block;
-      width: 75%;
-      margin: 1rem auto;
-    }
-
-    .modal_button {
-      // reset previous styling to create unique styling in the form
-      all: unset;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: $secondary-color;
-      background-color: black;
-      box-shadow: 0 20px 50px rbga(0, 0, 0, .5);
-      border: black solid 1px;
-      padding: .5rem;
-      border-radius: 75px;
-    }
-  }
-
-  &.show {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
 
 
