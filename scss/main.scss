@@ -239,14 +239,103 @@ nav {
 }
 
 
-
-
-
-
-
 // Contact Me Modal
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($color: #000000, $alpha: 0);
 
+  .modal-content {
+    position: relative;
+    text-align: center;
+    background-color: rgba(black, .6);
+    margin: 20% auto;
+    padding: 20px;
+    width: 75%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    animation-name: modalOpen;
+    animation-duration: 1s;
 
+    .contact_portrait {
+      position: absolute;
+      top: -58.5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h1 {
+      margin: 3vh 0 2vh 0;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      * {
+        width: 75%;
+        height: 25px;
+        margin: .25rem;
+      }
+
+      textarea {
+        height: 75%;
+      }
+
+      .submit {
+        height: 4vh;
+        border-radius: 75px;
+        border: none;
+        color: white;
+        background-color: red;
+
+        &:hover {
+          opacity: .3;
+        }
+
+      }
+
+      .contact_validation {
+        display: none;
+      }
+
+    }
+
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 2vw;
+  color: lightgrey;
+  font-size: 30px;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 
 
@@ -311,7 +400,6 @@ nav {
   }
 
 }
-
 
 
 
@@ -438,5 +526,6 @@ nav {
   }
 
 }
+
 
 @import "mobile";
