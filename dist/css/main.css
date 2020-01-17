@@ -227,23 +227,24 @@ nav {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: rgba(68, 68, 68, 0.7); }
   .modal .modal-content {
     position: relative;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 20% auto;
     padding: 20px;
     width: 75%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
     animation-name: modalOpen;
-    animation-duration: 1s; }
+    animation-duration: 1s;
+    z-index: 2; }
     .modal .modal-content .contact_portrait {
       position: absolute;
       top: -58.5px;
@@ -268,7 +269,8 @@ nav {
         border-radius: 75px;
         border: none;
         color: white;
-        background-color: red; }
+        background-color: red;
+        cursor: pointer; }
         .modal .modal-content form .submit:hover {
           opacity: .3; }
       .modal .modal-content form .contact_validation {
@@ -278,10 +280,10 @@ nav {
   position: absolute;
   top: 0;
   right: 2vw;
-  color: lightgrey;
-  font-size: 30px; }
+  color: white;
+  font-size: 50px; }
   .closeBtn:hover, .closeBtn:focus {
-    color: black;
+    color: #444;
     text-decoration: none;
     cursor: pointer; }
 
@@ -432,9 +434,9 @@ nav {
     height: 100%; }
   .wholesale_process h2 {
     color: white;
-    z-index: 3; }
+    z-index: 1; }
   .wholesale_process i {
-    z-index: 3; }
+    z-index: 1; }
   .wholesale_process p {
     padding: 1em;
     font-size: 1rem;
