@@ -163,7 +163,8 @@ nav {
     text-align: center;
     z-index: -1;
     transform: translateY(-50%);
-    font-size: 1em; }
+    font-size: 1em;
+    overflow: hidden; }
     .about_me .about_me_title h2 {
       padding-top: .5rem;
       padding-bottom: .5rem; }
@@ -311,7 +312,8 @@ nav {
     width: 100%;
     text-align: center;
     z-index: -1;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    overflow: hidden; }
     .investors .investors_title h2 {
       padding-top: .5rem;
       padding-bottom: .5rem; }
@@ -365,7 +367,8 @@ nav {
     width: 100%;
     text-align: center;
     z-index: -1;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    overflow: hidden; }
     .wholesale .wholesale_title .wholesale_title_mobile {
       display: block; }
     .wholesale .wholesale_title .wholesale_title_desktop {
