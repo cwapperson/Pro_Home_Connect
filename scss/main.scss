@@ -281,10 +281,12 @@ nav {
       align-items: center;
       width: 100%;
 
-      * {
+      input,
+      textarea {
         width: 75%;
         height: 25px;
         margin: .25rem;
+        font-size: 1.15em;
       }
 
       textarea {
@@ -311,21 +313,21 @@ nav {
 
     }
 
-  }
-}
+    .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 2vw;
+      color: white;
+      font-size: 50px;
 
-.closeBtn {
-  position: absolute;
-  top: 0;
-  right: 2vw;
-  color: white;
-  font-size: 50px;
+      &:hover,
+      &:focus {
+        color: #444;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
 
-  &:hover,
-  &:focus {
-    color: #444;
-    text-decoration: none;
-    cursor: pointer;
   }
 }
 
