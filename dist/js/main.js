@@ -34,14 +34,21 @@ function autoCloseMenu(x) {
   }
 }
 
-const navName = document.querySelector(".nav_name");
+// Automatically closes the navigation menu when the user
+// clicks on a link
+function autoCloseNavOverlay() {
+  menuBtn.classList.remove("close");
+  menuNav.classList.remove("show");
+}
 
 // This funtion will add a sticky header when the user
 // scrolls down.
+// const navName = document.querySelector(".nav_name");
+// const pncSmall = document.querySelector(".pnc_small");
 
 $(function() {
   var mainNav = $("nav");
-  var navName = $("nav_name");
+  var pncSmall = $(".pnc_small");
   sticky = "sticky_header";
   show = "show";
   headerHeight = $("header").height();
@@ -49,23 +56,13 @@ $(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > headerHeight) {
       mainNav.addClass(sticky);
-      navName.addClass(show);
+      pncSmall.addClass(show);
     } else {
       mainNav.removeClass(sticky);
-      navName.removeClass(show);
+      pncSmall.removeClass(show);
     }
   });
 });
-
-// Automatically closes the navigation menu when the user
-// clicks on a link
-// const autoClose = document.querySelector(".auto-close");
-function autoCloseNavOverlay() {
-  // If media query matches
-  menuBtn.classList.remove("close");
-  menuNav.classList.remove("show");
-  console.log("auto closing nav overlay");
-}
 
 // Contact Me Modal - Display/Hide
 const modal = document.getElementById("modal");

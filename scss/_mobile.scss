@@ -14,6 +14,7 @@
     .menu-btn {
       display: inline;
     }
+
   }
 
 
@@ -39,10 +40,11 @@
 // Tablets
 @include mediaMd {
   nav {
-    justify-content: space-around;
+    justify-content: flex-end;
 
     .menu_item {
-      padding: 0.5rem 0.75rem;
+      padding: .5em;
+      font-size: .8em;
     }
 
     .menu-btn {
@@ -106,7 +108,7 @@
 
     .menu_item,
     .ham {
-      padding: 0.5rem 2.5rem;
+      padding: 0.5rem 2rem;
     }
 
     .menu-btn {
@@ -151,6 +153,12 @@
       height: 350px;
     }
   }
+
+  // Contact Me Modal
+  .modal .modal-content {
+    width: 60%;
+  }
+
 
   // Investors Content
   .investors_content {
@@ -224,7 +232,7 @@
 
     .menu_item,
     .ham {
-      padding: 0.5rem 3rem;
+      padding: 0.5rem 4rem;
     }
 
     .menu-btn {
@@ -290,8 +298,10 @@
     }
   }
 
-
-
+  // Contact Me Modal
+  .modal .modal-content {
+    width: 40%;
+  }
 
   // Investors Content
   .investors_content {

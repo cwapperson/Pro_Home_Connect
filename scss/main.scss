@@ -60,15 +60,34 @@ nav {
   align-items: center;
   min-height: 6vh;
 
+  .pnc_small {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: white;
+    padding: .3rem;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: none;
+
+    &.show {
+      display: block;
+      animation-name: showPNCSmall;
+      animation-duration: 1s;
+    }
+
+  }
+
   // Nav Links
-  a {
+  .highlight {
     color: white;
+    padding: .5rem;
 
     &:hover {
       color: $secondary-color;
       @include easeOut();
-      border: solid $secondary-color 1px;
-      padding: .5rem;
     }
   }
 
@@ -78,6 +97,16 @@ nav {
     .nav_name {
       display: none;
     }
+  }
+}
+
+@keyframes showPNCSmall {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -97,6 +126,16 @@ nav {
     left: 0;
     margin-top: -1rem;
     padding: 1rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
   }
 
   &.show {
@@ -120,7 +159,7 @@ nav {
   width: 100%;
 
   li {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding: 0.25rem;
     font-weight: 1000;
   }
@@ -248,14 +287,14 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: none;
   background-color: rgba($color: #444, $alpha: .7);
 
   .modal-content {
     position: relative;
     text-align: center;
     background-color: rgba(black, .7);
-    margin: 20% auto;
+    margin: 15% auto;
     padding: 20px;
     width: 75%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
