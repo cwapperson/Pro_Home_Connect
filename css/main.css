@@ -224,6 +224,75 @@ nav {
       font-weight: bolder;
       transition: all 0.5s ease-out; }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(68, 68, 68, 0.7); }
+  .modal .modal-content {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20% auto;
+    padding: 20px;
+    width: 75%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    animation-name: modalOpen;
+    animation-duration: 1s;
+    z-index: 2; }
+    .modal .modal-content .contact_portrait {
+      position: absolute;
+      top: -58.5px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .modal .modal-content h1 {
+      margin: 3vh 0 2vh 0;
+      color: white; }
+    .modal .modal-content form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      .modal .modal-content form * {
+        width: 75%;
+        height: 25px;
+        margin: .25rem; }
+      .modal .modal-content form textarea {
+        height: 75%; }
+      .modal .modal-content form .submit {
+        height: 4vh;
+        border-radius: 75px;
+        border: none;
+        color: white;
+        background-color: red;
+        cursor: pointer; }
+        .modal .modal-content form .submit:hover {
+          opacity: .3; }
+      .modal .modal-content form .contact_validation {
+        display: none; }
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 2vw;
+  color: white;
+  font-size: 50px; }
+  .closeBtn:hover, .closeBtn:focus {
+    color: #444;
+    text-decoration: none;
+    cursor: pointer; }
+
+@keyframes modalOpen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .investors {
   position: relative;
   width: 100%;
@@ -365,9 +434,9 @@ nav {
     height: 100%; }
   .wholesale_process h2 {
     color: white;
-    z-index: 3; }
+    z-index: 1; }
   .wholesale_process i {
-    z-index: 3; }
+    z-index: 1; }
   .wholesale_process p {
     padding: 1em;
     font-size: 1rem;

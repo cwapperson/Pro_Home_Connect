@@ -67,24 +67,24 @@ function autoCloseNavOverlay() {
   console.log("auto closing nav overlay");
 }
 
-// Contact me Show/Hide
-const contactBtn = document.querySelector("#contact-me-button");
-const modalBg = document.querySelector("#modal_bg");
+// Contact Me Modal - Display/Hide
+const modal = document.getElementById("modal");
+const modalBtn = document.getElementById("contact-me-button");
+const closeBtn = document.getElementsByClassName("closeBtn")[0];
 
-// Set initial state of the contact me section
-let showContact = false;
+modalBtn.addEventListener("click", openModal);
+function openModal() {
+  modal.style.display = "block";
+}
 
-contactBtn.addEventListener("click", toggleContact);
+closeBtn.addEventListener("click", closeModal);
+function closeModal() {
+  modal.style.display = "none";
+}
 
-function toggleContact() {
-  if (!showContact) {
-    modalBg.classList.add("show");
-    showMenu = true;
-    console.log("contact show");
-  } else {
-    // Reset the contact me state
-    modalBg.classList.remove("show");
-    showContact = false;
-    console.log("contact hide");
+window.addEventListener("click", clickOutside);
+function clickOutside(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
   }
 }
