@@ -17,24 +17,15 @@
 
   }
 
-
-  // About Me
-  .about_me .about_me_title h2 {
+  // Section Titles
+  .about_me .about_me_title h2,
+  .investors .investors_title h2,
+  .wholesale .wholesale_title h2,
+  .retail .retail_title h2 {
     transform: translateX(20%);
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
-  // Investors Me
-  .investors .investors_title h2 {
-    transform: translateX(20%);
-    font-size: 1em;
-  }
-
-  // Whole Sale Title
-  .wholesale .wholesale_title h2 {
-    transform: translateX(20%);
-    font-size: 1em;
-  }
 }
 
 // Tablets
@@ -44,7 +35,7 @@
 
     .menu_item {
       padding: .5em;
-      font-size: .8em;
+      font-size: 1em;
     }
 
     .menu-btn {
@@ -66,26 +57,17 @@
   }
 
 
-  // About Me
-  .about_me .about_me_title h2 {
-    transform: translateX(15%);
-    font-size: 1.2em;
-  }
-
-  // Investors Me
-  .investors .investors_title h2 {
-    transform: translateX(15%);
-    font-size: 1.2em;
-  }
-
-  // Wholesale Title
-  .wholesale .wholesale_title h2 {
-    transform: translateX(15%);
-    font-size: 1.2em;
+  // Section Titles
+  .about_me .about_me_title h2,
+  .investors .investors_title h2,
+  .wholesale .wholesale_title h2,
+  .retail .retail_title h2 {
+    transform: translateX(20%);
+    font-size: 1.25em;
   }
 
 
-  // Wholesale Title
+
   .wholesale .wholesale_title .wholesale_title_desktop {
     display: block;
   }
@@ -215,6 +197,29 @@
 
   .wholesale .wholesale_title .wholesale_title_mobile {
     display: none;
+  }
+
+  // Retail Content
+  .retail_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  //Retail Video
+  .retail_video {
+    flex-direction: row;
+
+    iframe {
+      width: 640px;
+      height: 350px;
+    }
   }
 
 }
@@ -359,6 +364,30 @@
 
     p {
       padding: 2rem;
+    }
+  }
+
+
+  // Retail Content
+  .retail_content {
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+
+    p {
+      padding: 2rem;
+    }
+  }
+
+  //Retail Video
+  .retail_video {
+    flex-direction: row;
+
+    iframe {
+      width: 640px;
+      height: 350px;
     }
   }
 

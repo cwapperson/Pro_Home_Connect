@@ -9,11 +9,11 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: $main-background-color;
+  font-family: "Lora", sans-serif;
 }
 
 a,
@@ -21,6 +21,15 @@ li,
 i {
   text-decoration: none;
   list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -28,7 +37,9 @@ p {
   z-index: 1;
 }
 
+// *----------------------------------------------------------------------*
 //Header
+// *----------------------------------------------------------------------*
 header {
   text-align: center;
   background-color: black;
@@ -46,12 +57,9 @@ header {
   }
 }
 
-.nav_spacer {
-  min-height: 5vh;
-  width: 100%;
-}
-
+// *----------------------------------------------------------------------*
 // Navigation
+// *----------------------------------------------------------------------*
 nav {
   position: relative;
   background-color: black;
@@ -147,6 +155,13 @@ nav {
 
 }
 
+// Creates a spacer for when a user uses the navigation tree
+// so that the navbar and full section header can be seen
+.nav_spacer {
+  min-height: 5vh;
+  width: 100%;
+}
+
 // Sticky Navigation
 .sticky_header {
   position: -webkit-sticky;
@@ -156,7 +171,9 @@ nav {
   z-index: 2;
 }
 
+// *----------------------------------------------------------------------*
 // Name
+// *----------------------------------------------------------------------*
 .name {
   text-align: center;
   width: 100%;
@@ -164,11 +181,13 @@ nav {
   li {
     font-size: 1.5rem;
     padding: 0.25rem;
-    font-weight: 1000;
+    font-weight: bold;
   }
 }
 
+// *----------------------------------------------------------------------*
 // Icons
+// *----------------------------------------------------------------------*
 .icons {
   text-align: center;
   text-decoration: none;
@@ -187,7 +206,9 @@ nav {
   }
 }
 
+// *----------------------------------------------------------------------*
 // About Me
+// *----------------------------------------------------------------------*
 .about_me {
   position: relative;
   width: 100%;
@@ -247,9 +268,9 @@ nav {
 
 }
 
-
-
+// *----------------------------------------------------------------------*
 // Contact Me
+// *----------------------------------------------------------------------*
 .contact_me_button {
   position: relative;
   display: flex;
@@ -346,13 +367,11 @@ nav {
         &:hover {
           opacity: .3;
         }
-
       }
 
       .contact_validation {
         display: none;
       }
-
     }
 
     .closeBtn {
@@ -383,10 +402,9 @@ nav {
   }
 }
 
-
-
-
+// *----------------------------------------------------------------------*
 // Investors
+// *----------------------------------------------------------------------*
 .investors {
   position: relative;
   width: 100%;
@@ -445,15 +463,11 @@ nav {
   iframe {
     padding: 1rem;
   }
-
 }
 
-
-
-
-
-
+// *----------------------------------------------------------------------*
 // Wholesale
+// *----------------------------------------------------------------------*
 .wholesale {
   position: relative;
   width: 100%;
@@ -541,9 +555,6 @@ nav {
   }
 }
 
-
-
-
 //Wholesale Process
 .wholesale_process {
   position: relative;
@@ -551,10 +562,6 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-
-
-  // margin-top: 3vh;
-  // width: 100%;
   text-align: center;
   @include background($wholesale_process_background);
 
@@ -573,6 +580,110 @@ nav {
     color: white;
   }
 
+}
+
+
+// Wholesale Buttons
+.wholesale_buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 8vh;
+
+  .w_button_wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    button {
+      margin-top: 1vh;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: white;
+      background-color: black;
+      box-shadow: 0 20px 50px rbga(0, 0, 0, .5);
+      border: black solid 1px;
+      padding: 1rem;
+      border-radius: 75px;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        font-weight: bolder;
+        @include easeOut;
+      }
+    }
+  }
+}
+
+
+// *----------------------------------------------------------------------*
+// Retail
+// *----------------------------------------------------------------------*
+.retail {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .round_block {
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 0 75px 75px 0;
+    background-color: black;
+  }
+
+  .retail_title {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    h2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+
+    .title-line {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+    }
+  }
+}
+
+// Retail Content
+.retail_content {
+  position: relative;
+  margin: 2vw 5vh 2vw 5vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  @include background($retail_background);
+}
+
+//Retail Video
+.retail_video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  iframe {
+    padding: 1rem;
+  }
 }
 
 
