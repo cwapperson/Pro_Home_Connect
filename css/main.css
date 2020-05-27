@@ -117,7 +117,7 @@ nav {
     color: white;
     padding: .5rem; }
     nav .highlight:hover {
-      color: #C0111F;
+      color: yellow;
       transition: all 0.5s ease-out; }
   nav .menu_item {
     padding: 0.5rem 0.5rem; }
@@ -148,7 +148,7 @@ nav {
       text-decoration: none;
       color: white; }
       .nav_overlay .nav_overlay_item a:hover {
-        color: #C0111F;
+        color: yellow;
         transition: all 0.5s ease-out; }
   .nav_overlay.show {
     display: flex; }
@@ -182,7 +182,7 @@ nav {
     padding: .5rem;
     color: black; }
     .icons a:hover {
-      color: #C0111F;
+      color: yellow;
       transition: all 0.5s ease-out; }
 
 .about_me {
@@ -258,8 +258,8 @@ nav {
     cursor: pointer; }
     .contact_me_button button:hover {
       color: black;
-      background-color: #C0111F;
-      border-color: #C0111F;
+      background-color: yellow;
+      border-color: yellow;
       font-weight: bolder;
       transition: all 0.5s ease-out; }
 
@@ -510,8 +510,8 @@ nav {
       cursor: pointer; }
       .wholesale_buttons .w_button_wrapper button:hover {
         color: black;
-        background-color: #C0111F;
-        border-color: #C0111F;
+        background-color: yellow;
+        border-color: yellow;
         font-weight: bolder;
         transition: all 0.5s ease-out; }
 
